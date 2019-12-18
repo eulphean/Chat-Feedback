@@ -1,3 +1,8 @@
+.agents {
+    display: flex; 
+    flex-direction: row; 
+}
+
 .agentcontainer {
     margin: 25px;
     padding: 10px;
