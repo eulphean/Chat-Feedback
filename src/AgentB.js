@@ -66,4 +66,12 @@ class AgentB {
     getRate() {
         return this.rateSlider.value/100; 
     }
+
+    getEmotion() {
+        return this.emotion.value; 
+    }
+
+    setResponse(val) {
+        this.response.innerText = val; 
+    }
 }
