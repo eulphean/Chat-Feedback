@@ -1,0 +1,53 @@
+.container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
+
+.agents {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.agentcontainer {
+  width: 20%;
+  margin: 25px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-style:solid;
+}
+
+.propertygroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+h4 {
+  margin-right: 20px;
+}
+
+select {
+  margin-right: 20px;
+}
+
+.inputcontainer {
+  margin: 25px;
+  display: flex;
+  flex-direction: row; 
+  height: 50px;
+}
+
+.userinput {
+  width: 400px;
+  font-size: 25px;
+}
+
+button {
+  width: 100px;
+  font-size: 20px;
+}

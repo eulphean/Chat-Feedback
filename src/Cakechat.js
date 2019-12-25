@@ -1,7 +1,7 @@
 class Cakechat {
     constructor() {
-        this.endpoint = "localhost:8080";
-        this.uri = "http://" + this.endpoint + "/cakechat_api/v1/actions/get_response";
+        this.endpoint = "babble-cakechat.xyz";
+        this.uri = "https://" + this.endpoint + "/cakechat_api/v1/actions/get_response";
     }
 
     getResponse(context, emotion, callback) {
@@ -17,11 +17,11 @@ class Cakechat {
     }
 
     onReadyStateChange(request, callback, emotion) {
-        if (request.readyState == 4) { // DONE
-            if (request.status == 200) { // SUCCESS
+        if (request.readyState === 4) { // DONE
+            if (request.status === 200) { // SUCCESS
                 var response = JSON.parse(request.response)['response'];
                 callback(response); 
-            } else if (request.status == 0) { // TIMEOUT
+            } else if (request.status === 0) { // TIMEOUT
                 // TIMEOUT : We already catch that by registering for that callback. 
             } else { // ANY OTHER ERROR
                 console.error("Cakechat request failed with error " + request.status);
@@ -36,3 +36,5 @@ class Cakechat {
         callback("ERROR", emotion); 
     }
 }
+
+export default Cakechat; 
